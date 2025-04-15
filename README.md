@@ -18,37 +18,36 @@ Effortlessly manage and reuse everything you copy across the web! This Chrome Ex
 
 ## 🧩 Architecture Overview
 
-```plaintext
-                +---------------------------+
-                |        Webpage           |
-                |    (ChatGPT, blogs, etc) |
-                +---------------------------+
-                            |
-                [ injected.js ]  ← runs in page context
-                            |
-           window.postMessage({ text })
-                            ▼
-                +---------------------------+
-                |       content.js          |
-                |  (content script sandbox) |
-                +---------------------------+
-                            |
-              chrome.runtime.sendMessage({ text })
-                            ▼
-                +---------------------------+
-                |      background.js        |
-                |  (persistent background)  |
-                +---------------------------+
-                            |
-                chrome.storage.local.set()
-                            ▼
-                +---------------------------+
-                |         popup.js          |
-                | (popup.html + style.css)  |
-                +---------------------------+
-```
+```text
+   ┌─────────────────────────────┐
+   │         Web Page            │
+   │     (injected.js)           │
+   │  - Listens for copy events  │
+   └────────────┬────────────────┘
+                │ window.postMessage
+                ▼
+   ┌─────────────────────────────┐
+   │       content.js            │
+   │ - Injects script into page  │
+   │ - Receives clipboard data   │
+   │ - Sends to background.js    │
+   └────────────┬────────────────┘
+                │ chrome.runtime.sendMessage
+                ▼
+   ┌─────────────────────────────┐
+   │       background.js         │
+   │ - Saves data to storage     │
+   │ - Persistent across tabs    │
+   └─────────────────────────────┘
+                ▲
+                │ chrome.storage.local.get
+   ┌─────────────────────────────┐
+   │         popup.js            │
+   │ - Renders search + history  │
+   │ - Supports delete/copy UI   │
+   └─────────────────────────────┘
 
----
+---   
 
 ## 📁 Project Structure
 
@@ -129,7 +128,7 @@ MIT License – feel free to use, fork, and enhance!
 ## 🐛 Issues
 
 Found a bug? Have a feature request?  
-Please [open an issue](https://github.com/your-username/clipboard-extension/issues) and let us know!
+Please [open an issue](https://github.com/kushalnl7/clipboard-chrome-extension/issues) and let us know!
 
 > We welcome contributions, feedback, and ideas to improve this tool further!
 
