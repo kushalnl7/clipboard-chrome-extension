@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       const del = document.createElement('span');
-      del.textContent = '🗑️';
+      del.innerHTML = '<i class="fa-solid fa-trash-alt delete-icon"></i>';
       del.className = 'delete-icon';
       del.onclick = (e) => {
         e.stopPropagation();
