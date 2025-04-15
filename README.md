@@ -121,13 +121,15 @@ clipboard-extension/
 
 ---
 
-## 👨‍💻 Author
-Built with ❤️ by [Your Name].
-
-Contributions, feedback, and suggestions are welcome!
+## 📄 License
+MIT License – feel free to use, fork, and enhance!
 
 ---
 
-## 📄 License
-MIT License – feel free to use, fork, and enhance!
+## 🐛 Issues
+
+Found a bug? Have a feature request?  
+Please [open an issue](https://github.com/your-username/clipboard-extension/issues) and let us know!
+
+> We welcome contributions, feedback, and ideas to improve this tool further!
 
