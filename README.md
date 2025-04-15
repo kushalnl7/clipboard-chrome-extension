@@ -18,6 +18,8 @@ Effortlessly manage and reuse everything you copy across the web! This Chrome Ex
 
 ## 🧩 Architecture Overview
 
+## 🧠 Architecture Overview
+
 ```text
    ┌─────────────────────────────┐
    │         Web Page            │
@@ -46,6 +48,7 @@ Effortlessly manage and reuse everything you copy across the web! This Chrome Ex
    │ - Renders search + history  │
    │ - Supports delete/copy UI   │
    └─────────────────────────────┘
+```
 
 ---   
 
