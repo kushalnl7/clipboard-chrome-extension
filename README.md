@@ -18,8 +18,6 @@ Effortlessly manage and reuse everything you copy across the web! This Chrome Ex
 
 ## 🧩 Architecture Overview
 
-## 🧠 Architecture Overview
-
 ```text
    ┌─────────────────────────────┐
    │         Web Page            │
@@ -96,12 +94,6 @@ clipboard-extension/
 3. Enable **Developer Mode** (top-right corner)
 4. Click **Load Unpacked** and select the project folder.
 5. Visit any webpage and start copying text!
-
----
-
-## ✨ Screenshots
-
-> 📌 Add your screenshots here for UI preview (popup, copy event, toaster message, etc.)
 
 ---
 
