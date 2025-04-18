@@ -1,22 +1,22 @@
-# 📋 Clipboard History Chrome Extension
+# Clipboard History Chrome Extension
 
 Effortlessly manage and reuse everything you copy across the web! This Chrome Extension automatically captures copied text from any webpage, stores it persistently, and offers a beautiful popup UI to search, delete, and re-copy your clipboard history.
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ **Automatic Clipboard Tracking**: Seamlessly captures text when you copy from any tab.
-- 📋 **Popup UI**: One-click access to your entire clipboard history.
-- 🔍 **Search**: Quickly filter through your saved entries.
-- 🗑️ **Delete Individual Entries**: Each item has a delete icon to remove it easily.
-- 📦 **Persistent Storage**: Clipboard history is stored using `chrome.storage.local`.
-- 📱 **Responsive Design**: Works smoothly across different screen sizes.
-- 📢 **Toaster Notification**: Lets you know when a text is copied from the popup.
+- **Automatic Clipboard Tracking**: Seamlessly captures text when you copy from any tab.
+- **Popup UI**: One-click access to your entire clipboard history.
+- **Search**: Quickly filter through your saved entries.
+- **Delete Individual Entries**: Each item has a delete icon to remove it easily.
+- **Persistent Storage**: Clipboard history is stored using `chrome.storage.local`.
+- **Responsive Design**: Works smoothly across different screen sizes.
+- **Toaster Notification**: Lets you know when a text is copied from the popup.
 
 ---
 
-## 🧩 Architecture Overview
+## Architecture Overview
 
 ```text
    ┌─────────────────────────────┐
@@ -50,7 +50,7 @@ Effortlessly manage and reuse everything you copy across the web! This Chrome Ex
 
 ---   
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 clipboard-extension/
@@ -66,7 +66,7 @@ clipboard-extension/
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ### 1. Clipboard Tracking
 - `injected.js` runs inside web pages and listens for `copy` events.
@@ -87,7 +87,7 @@ clipboard-extension/
 
 ---
 
-## 🛠️ Installation (for development)
+## Installation (for development)
 
 1. Clone or download this repository.
 2. Open Chrome and go to `chrome://extensions/`
@@ -97,30 +97,12 @@ clipboard-extension/
 
 ---
 
-## 🔐 Permissions Used
-
-- `clipboardRead`, `clipboardWrite` – To access and write clipboard content
-- `storage` – To persist clipboard history locally
-- `activeTab`, `scripting` – To inject scripts into pages
-
----
-
-## 🔧 Future Enhancements
-
-- 🌓 Dark mode support
-- 📥 Export clipboard history to `.csv`
-- 🔁 Sync history across devices (via `chrome.storage.sync`)
-- 📌 Pin or favorite entries
-- 📅 Timestamp each copy
-
----
-
-## 📄 License
+## License
 MIT License – feel free to use, fork, and enhance!
 
 ---
 
-## 🐛 Issues
+## Issues
 
 Found a bug? Have a feature request?  
 Please [open an issue](https://github.com/kushalnl7/clipboard-chrome-extension/issues) and let us know!
